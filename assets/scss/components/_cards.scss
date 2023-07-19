@@ -1,0 +1,62 @@
+.card-items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+
+  @include breakpoint-down(lg) {
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include breakpoint-down(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoint-down(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint-down(xs) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-item {
+    border-bottom: 1px solid $jet;
+
+    &-img {
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    &-body {
+      padding: 16px 0;
+    }
+
+    &-genre {
+      color: $magnolia-light;
+      font-size: 14px;
+
+      @include breakpoint-down(lg) {
+        font-size: 12px;
+      }
+    }
+
+    &-price {
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .discount-percent {
+        font-size: 14px;
+        padding: 4px 6px;
+        border-radius: 6px;
+        font-weight: 600;
+
+        @include breakpoint-down(lg) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

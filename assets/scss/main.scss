@@ -1,0 +1,11 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+@import "components/showcase";
+@import "components/cards";
+@import "layout/sidebar.scss";
+@import "pages/home";
+
+// sass --watch assets/scss/main.scss:assets/css/style.css
